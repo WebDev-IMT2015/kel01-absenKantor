@@ -1,0 +1,30 @@
+.mid {
+	margin-top: 20px;
+	text-align: center;
+	align-content: center;
+}
+
+.raleway {
+	font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+#title {
+	margin-top: 20px;
+	margin-bottom: 50px;
+	font-size: 50px;
+}
+
+.full-height {
+    height: 90vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
