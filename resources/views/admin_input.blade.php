@@ -18,10 +18,11 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
-                        <form method="post">
-                        <input type="text" class="form-control" placeholder="NIP" name="" required=""><br>
-                        <input type="text" class="form-control" placeholder="Nama" name="" required=""><br>
-                        <input type="text" class="form-control" placeholder="Jabatan" name="" required=""><br>
+                        <form action='input' method="POST">
+                        {{ csrf_field() }}
+                        <input type="text" class="form-control" placeholder="NIP" name="nip" required=""><br>
+                        <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
+                        <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button><br><br>
                     </form>
                     </div>

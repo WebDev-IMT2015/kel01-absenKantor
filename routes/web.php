@@ -19,8 +19,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('input', function () {
-    return view('admin_input');
-});
+// Route::get('input', function () {
+//     return view('admin_input');
+// });
+
+Route::get('input', 'tambahPegawaiController@index');
+Route::post('input', 'tambahPegawaiController@simpan');
 
 //sfbjndlfbsdliufbsdb

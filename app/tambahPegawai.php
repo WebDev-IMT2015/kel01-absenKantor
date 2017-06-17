@@ -9,6 +9,6 @@ class tambahPegawai extends Model
 	protected $primaryKey = 'nip';
 
     protected $fillable = [
-        'name','jabatan'
+        'nip','name','jabatan'
     ];
 }

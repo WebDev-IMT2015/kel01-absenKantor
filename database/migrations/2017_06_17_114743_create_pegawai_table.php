@@ -13,7 +13,7 @@ class CreatePegawaiTable extends Migration
      */
     public function up()
     {
-        Schema::create('pegawai', function (Blueprint $table) {
+        Schema::create('tambah_pegawais', function (Blueprint $table) {
             $table->string('nip')->unique();
             $table->string('name');
             $table->string('jabatan');
@@ -28,6 +28,6 @@ class CreatePegawaiTable extends Migration
      */
     public function down()
     {
-       Schema::dropIfExists('pegawai');
+       Schema::dropIfExists('tambah_pegawais');
     }
 }
