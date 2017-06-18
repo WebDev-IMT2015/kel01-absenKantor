@@ -23,8 +23,9 @@
                         <input type="text" class="form-control" placeholder="NIP" name="nip" required=""><br>
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
                         <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
-                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button><br><br>
-                    </form>
+                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
+                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
+                        </form>
                     </div>
                     <div class="col-md-2"></div>
                 </div>

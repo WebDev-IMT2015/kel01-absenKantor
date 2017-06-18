@@ -17,9 +17,11 @@
                 <h2 id="title">Absensi Kantor Brazzers</h2>
                 <div class="row">
                     <div class="links">
-                        <a href="input">Input</a>
+                        <a href="{{ url('input') }}">Input</a>
                         <a href="">Set time</a>
                         <a href="">History</a>
+                        <br>
+                        <a href="">List Pekerja</a>
                     </div>
                 </div>
             </div>

@@ -26,4 +26,7 @@ Route::get('/', function () {
 Route::get('input', 'tambahPegawaiController@index');
 Route::post('input', 'tambahPegawaiController@simpan');
 
+Route::get('setTime', 'setWaktuController@index');
+Route::post('setTime', 'setWaktuController@simpan');
+
 //sfbjndlfbsdliufbsdb
