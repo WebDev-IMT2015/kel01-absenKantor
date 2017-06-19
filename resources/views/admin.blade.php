@@ -20,7 +20,6 @@
                         <a href="{{ url('input') }}">Input</a>
                         <a href="{{ url('setTime') }}">Set time</a>
                         <a href="">History</a>
-                        <br>
                         <a href="">List Pekerja</a>
                     </div>
                 </div>

@@ -25,9 +25,9 @@
                         <input type="time" class="form-control" placeholder="JAM ISTIRAHAT MULAI" name="mulai" required=""><br>
                         <input type="time" class="form-control" placeholder="JAM ISTIRAHAT SELESAI" name="selesai" required=""><br>
                         <input type="time" class="form-control" placeholder="TOLERANSI" name="toleransi" required=""><br>
-                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
-                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
+                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button><br><br>
                         </form>
+                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                     </div>
                     <div class="col-md-2"></div>
                 </div>
