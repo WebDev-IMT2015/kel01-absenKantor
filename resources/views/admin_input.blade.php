@@ -24,8 +24,9 @@
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
                         <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
-                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                         </form>
+                        <br>
+                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                     </div>
                     <div class="col-md-2"></div>
                 </div>

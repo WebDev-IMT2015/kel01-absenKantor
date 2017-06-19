@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class setWaktu extends Model
 {
-	protected $primaryKey = 'ids';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
-        'masuk','keluar'
+        'id','masuk','keluar','istirahat_mulai','istirahat_selesai','toleransi'
     ];
 }

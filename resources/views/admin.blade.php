@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="links">
                         <a href="{{ url('input') }}">Input</a>
-                        <a href="">Set time</a>
+                        <a href="{{ url('setTime') }}">Set time</a>
                         <a href="">History</a>
                         <br>
                         <a href="">List Pekerja</a>

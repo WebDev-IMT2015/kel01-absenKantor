@@ -22,6 +22,9 @@
                         {{ csrf_field() }}
                         <input type="time" class="form-control" placeholder="JAM MASUK" name="masuk" required=""><br>
                         <input type="time" class="form-control" placeholder="JAM KELUAR" name="keluar" required=""><br>
+                        <input type="time" class="form-control" placeholder="JAM ISTIRAHAT MULAI" name="mulai" required=""><br>
+                        <input type="time" class="form-control" placeholder="JAM ISTIRAHAT SELESAI" name="selesai" required=""><br>
+                        <input type="time" class="form-control" placeholder="TOLERANSI" name="toleransi" required=""><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
                         <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                         </form>
@@ -36,7 +39,7 @@
     <script>
         function input()
         {
-            alert("Berhasil setWaktu.")
+            alert("Berhasil Set Waktu.")
         }
     </script>
 </body>
