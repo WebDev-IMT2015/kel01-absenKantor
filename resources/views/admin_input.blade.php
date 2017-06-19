@@ -22,7 +22,7 @@
                         {{ csrf_field() }}
                         <input type="text" class="form-control" placeholder="NIP" name="nip" required=""><br>
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
-                        <input type="text" class="form-control" placeholder="Jabatan" name="jabatan" required=""><br>
+                        <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
                         </form>
                         <br>

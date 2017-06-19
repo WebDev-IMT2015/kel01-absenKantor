@@ -32,8 +32,9 @@ class tambahPegawaiController extends Controller
 
     public function indexView()
     {
-      $tambahPegawai = tambahPegawai::all();
-      return view('admin_list')->with('admin_list', $tambahPegawai);
+      $t=tambahPegawai::all();
+      return view('admin_list')->with(compact('t'));
+      //return view('admin_list');
     }
 
 }

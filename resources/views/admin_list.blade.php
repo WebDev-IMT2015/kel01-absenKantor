@@ -15,13 +15,15 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 mid">
                 <h2 id="title" class="raleway">List Pegawai</h2>
+                @if(count($t))
                 <ul>
-                    @foreach ($tambahPegawai as $pg)
+                    @foreach ($t as $pg)
                     <li>
-                        {{ $pg->nip }}
+                        {{ $pg->nip }} - {{ $pg->name }} - {{ $pg->jabatan }}
                     </li>
                     @endforeach
                 </ul>
+                @endif 
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
@@ -29,7 +31,7 @@
                         {{ csrf_field() }}
                         <input type="text" class="form-control" placeholder="NIP" name="nip" required=""><br>
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
-                        <input type="text" class="form-control" placeholder="Jabatan" name="jabatan" required=""><br>
+                        <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
                         </form>
                         <br>
