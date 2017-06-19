@@ -18,6 +18,10 @@ class setWaktuController extends Controller
         if(setWaktu::find('1')){
         	$db = setWaktu::find('1');
         	$db->masuk = $request->input('masuk');
+            $db->keluar = $request->input('keluar');
+            $db->mulai = $request->input('mulai');
+            $db->selesai = $request->input('selesai');
+            $db->toleransi = $request->input('toleransi');
         	$db->save();
         	return view('admin');
         }else{
