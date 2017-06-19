@@ -14,7 +14,14 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 mid">
-                <h2 id="title" class="raleway">Input Pegawai</h2>
+                <h2 id="title" class="raleway">List Pegawai</h2>
+                <ul>
+                    @foreach ($tambahPegawai as $pg)
+                    <li>
+                        {{ $pg->nip }}
+                    </li>
+                    @endforeach
+                </ul>
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">

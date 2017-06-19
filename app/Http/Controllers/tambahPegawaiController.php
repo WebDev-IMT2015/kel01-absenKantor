@@ -27,6 +27,13 @@ class tambahPegawaiController extends Controller
         $pegawai->jabatan = $jabat;
         $pegawai->save();
         return redirect('admin');
-    } 
+      } 
     }
+
+    public function indexView()
+    {
+      $tambahPegawai = tambahPegawai::all();
+      return view('admin_list')->with('admin_list', $tambahPegawai);
+    }
+
 }

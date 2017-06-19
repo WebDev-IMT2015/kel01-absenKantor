@@ -29,4 +29,4 @@ Route::post('input', 'tambahPegawaiController@simpan');
 Route::get('setTime', 'setWaktuController@index');
 Route::post('setTime', 'setWaktuController@simpan');
 
-//sfbjndlfbsdliufbsdb
+Route::get('list', 'tambahPegawaiController@indexView');
