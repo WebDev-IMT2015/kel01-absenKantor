@@ -52,7 +52,7 @@
                     @if(isset($t_edit)) 
                     <form action="{{ route('admin.update') }}" method="POST">
                         {{ csrf_field() }}
-                        <input type="text" class="form-control" placeholder="NIP" name="nip" required="" @if(isset($t_edit)) value="{{ $t_edit->nip }}" @endif><br>
+                        <input type="text" class="form-control" placeholder="NIP" name="nip" required="" readonly="" @if(isset($t_edit)) value="{{ $t_edit->nip }}" @endif><br>
                         <input type="text" class="form-control" placeholder="Nama" name="nama" required="" @if(isset($t_edit)) value="{{ $t_edit->name }}" @endif><br>
                         <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required="" @if(isset($t_edit)) value="{{ $t_edit->jabatan }}" @endif><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">SAVE</button>
