@@ -43,7 +43,7 @@
                                         <td>{{ $pg->jabatan }}</td>
                                         <td>
                                         <a href="{{ route('admin.edit', $pg->nip) }}" class="btn btn-warning btn-xs">EDIT</a>
-                                        
+                                        <a href="{{ route('admin.hapus', $pg->nip) }}" class="btn btn-danger btn-xs">DELETE</a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\tambahPegawai;
+use App\absen;
 
 class tambahPegawaiController extends Controller
 {
@@ -36,9 +37,10 @@ class tambahPegawaiController extends Controller
       //return view('admin_list');
     }
 
-    public function hapus(Request $request, tambahPegawai $t){
+    public function hapus($nip){
+        $t = tambahPegawai::find($nip);
         $t->delete();
-        return redirect('admin_list')->with(compact('t'));
+        return redirect('admin');
     }
 
     public function edit($nip){

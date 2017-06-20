@@ -43,6 +43,6 @@ Route::post('setTime', 'setWaktuController@simpan');
 
 Route::get('list', 'tambahPegawaiController@indexView');
 
-Route::get('admin/hapus/{nip}', 'tambahPegawaiController@hapus');
+Route::get('admin/hapus/{nip}', 'tambahPegawaiController@hapus')->name('admin.hapus');
 Route::get('admin/{nip}/edit', 'tambahPegawaiController@edit')->name('admin.edit');
 Route::post('admin/edit', 'tambahPegawaiController@update')->name('admin.update');
