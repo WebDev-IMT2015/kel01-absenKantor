@@ -24,7 +24,7 @@ class setWaktuController extends Controller
             $db->istirahat_selesai = $request->input('selesai');
             $db->toleransi = $request->input('toleransi');
         	$db->save();
-        	return view('admin')->with('admin' , $todo);
+        	return view('admin')->with('admin' , $db);
         }else{
         	$masuk = $request->input('masuk');
         	$keluar = $request->input('keluar');
