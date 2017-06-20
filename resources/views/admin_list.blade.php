@@ -15,7 +15,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 mid">
                 <h2 id="title" class="raleway">List Pegawai</h2>
-                @if(count($t))
+                <!-- @if(count($t))
                 <ul>
                     @foreach ($t as $pg)
                     <li>
@@ -23,21 +23,29 @@
                     </li>
                     @endforeach
                 </ul>
-                @endif 
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <form action='input' method="POST">
-                        {{ csrf_field() }}
-                        <input type="text" class="form-control" placeholder="NIP" name="nip" required=""><br>
-                        <input type="text" class="form-control" placeholder="Nama" name="nama" required=""><br>
-                        <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required=""><br>
-                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button>
-                        </form>
-                        <br>
-                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
-                    </div>
-                    <div class="col-md-2"></div>
+                @endif  -->
+               <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>No</th>
+                            <th>NIP</th>
+                            <th>Nama Pegawai</th>
+                            <th>Jabatan</th>
+                            <th>Action</th>
+                        </tr>
+                        @if(count($t))
+                            <?php $count=1;?>
+                                @foreach($t as $pg)
+                                    <tr>
+                                        <td><?php echo $count++;?></td>
+                                        <td>{{ $pg->nip }}</td>
+                                        <td>{{ $pg->name }}</td>
+                                        <td>{{ $pg->jabatan }}</td>
+                                        <td><a href="{{ route('admin.edit', $pg->nip) }}" class="btn btn-warning btn-xs">EDIT
+                                        <a href="{{ route('admin/hapus/', $pg->nip) }}" class="btn btn-danger btn-xs">HAPUS</td>
+                                    </tr>
+                                @endforeach
+                        @endif                    </table>
                 </div>
             </div>
             <div class="col-md-2"></div>
