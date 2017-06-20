@@ -18,8 +18,8 @@
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-6">
-						<form method="post">
-							<input type="text" class="form-control" placeholder="Masukkan NIP" name="">
+						<form method="post" action="Absen">
+							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip">
 						</form>
 					</div>
 					<div class="col-md-2">
