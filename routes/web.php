@@ -21,9 +21,18 @@ Route::get('admin', function () {
     return view('admin');
 });
 
-// Route::get('input', function () {
-//     return view('admin_input');
-// });
+Route::get('absen_masuk', 'absenController@indexMasuk');
+Route::post('absen_masuk', 'absenController@absenMasuk');
+
+Route::get('absen_keluar', 'absenController@indexKeluar');
+Route::post('absen_keluar', 'absenController@absenKeluar');
+
+Route::get('absen_mulai', 'absenController@indexMulai');
+Route::post('absen_mulai', 'absenController@absenMulai');
+
+Route::get('absen_selesai', 'absenController@indexSelesai');
+Route::post('absen_selesai', 'absenController@absenSelesai');
+
 Route::get('input', 'tambahPegawaiController@index');
 Route::post('input', 'tambahPegawaiController@simpan');
 

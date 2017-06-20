@@ -15,10 +15,17 @@
 			<div class="col-md-2"></div>
 			<div class="col-md-8 mid">
 				<h2 id="title" class="raleway">Absensi Kantor Brazzers</h2>
-				<a href="{{ url('absen_masuk') }}"><button class="btn btn-md btn-info">Absen Masuk</button></a>&nbsp
-				<a href="{{ url('absen_keluar') }}"><button class="btn btn-md btn-success">Absen keluar</button></a>&nbsp
-				<a href="{{ url('absen_istirahat_mulai') }}"><button class="btn btn-md btn-info">Absen Istirahat Mulai</button></a>&nbsp
-				<a href="{{ url('absen_istirahat_selesai') }}"><button class="btn btn-md btn-success">Absen Istirahat Selesai</button></a>
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-6">
+						<form method="post" action="Absen">
+							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip">
+						</form>
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-info" onclick="berhasil()" type="submit">Absen</button>
+					</div>
+				</div>
 			</div>
 			<div class="col-md-2"></div>
 		</div>

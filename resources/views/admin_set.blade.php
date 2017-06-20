@@ -18,6 +18,7 @@
                 <div class="row">
                     <div class="col-md-2"></div>
                     <div class="col-md-8">
+                    @if(count($t))
                     @foreach ($t as $waktu)
                         <form action='setTime' method="POST">
                         {{ csrf_field() }}
@@ -30,6 +31,18 @@
                         </form>
                         <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                     @endforeach
+                    @else
+                        <form action='setTime' method="POST">
+                        {{ csrf_field() }}
+                        <input type="time" class="form-control" placeholder="JAM MASUK" name="masuk" required=""><br>
+                        <input type="time" class="form-control" placeholder="JAM KELUAR" name="keluar" required=""><br>
+                        <input type="time" class="form-control" placeholder="JAM ISTIRAHAT MULAI" name="mulai" required=""><br>
+                        <input type="time" class="form-control" placeholder="JAM ISTIRAHAT SELESAI" name="selesai" required="" ><br>
+                        <input type="time" class="form-control" placeholder="TOLERANSI" name="toleransi" required=""><br>
+                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">Input</button><br><br>
+                        </form>
+                        <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
+                    @endif
                     </div>
                     <div class="col-md-2"></div>
                 </div>
