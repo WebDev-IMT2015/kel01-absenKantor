@@ -16,7 +16,7 @@ class CreateAbsenTable extends Migration
         Schema::create('absens', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nip');
-            $table->foreign('nip')->references('nip')->on('tambah_pegawais');
+            $table->foreign('nip')->references('nip')->on('tambah_pegawais')->onDelete('cascade');
             $table->date('tanggal');
             $table->datetime('masuk')->nullable();
             $table->datetime('keluar')->nullable();
