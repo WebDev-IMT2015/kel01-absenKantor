@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('admin', function () {
-    return view('admin');
-});
+
 
 Route::get('/', function () {
     return view('index');
@@ -22,7 +20,7 @@ Route::get('/', function () {
 // Route::get('input', function () {
 //     return view('admin_input');
 // });
-
+Route::get('admin', 'tambahPegawaiController@indexAdmin');
 Route::get('input', 'tambahPegawaiController@index');
 Route::post('input', 'tambahPegawaiController@simpan');
 
