@@ -37,4 +37,26 @@ class tambahPegawaiController extends Controller
       //return view('admin_list');
     }
 
+    public function hapus(Request $request, tambahPegawai $t){
+        $t->delete();
+        return redirect('admin_list')->with(compact('t'));
+    }
+
+    public function edit($nip){
+        $t=tambahPegawai::all();
+        $t_edit = tambahPegawai::find($nip);
+        return view('admin_list')->with(compact('t'))->with(compact('t_edit'));
+    }
+
+    public function update(Request $request){
+        $nip = $request->input('nip');
+        $nama = $request->input('nama');
+        $jabat = $request->input('jabat');
+        $pegawai = tambahPegawai::find($nip);
+        $pegawai->name = $nama;
+        $pegawai->jabatan = $jabat;
+        $pegawai->save();
+
+        return redirect('admin');
+    }
 }

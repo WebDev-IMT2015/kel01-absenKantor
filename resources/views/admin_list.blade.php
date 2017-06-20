@@ -41,11 +41,23 @@
                                         <td>{{ $pg->nip }}</td>
                                         <td>{{ $pg->name }}</td>
                                         <td>{{ $pg->jabatan }}</td>
-                                        <td><a href="{{ route('admin.edit', $pg->nip) }}" class="btn btn-warning btn-xs">EDIT
-                                        <a href="{{ route('admin/hapus/', $pg->nip) }}" class="btn btn-danger btn-xs">HAPUS</td>
+                                        <td>
+                                        <a href="{{ route('admin.edit', $pg->nip) }}" class="btn btn-warning btn-xs">EDIT</a>
+                                        
+                                        </td>
                                     </tr>
                                 @endforeach
-                        @endif                    </table>
+                        @endif                    
+                    </table>
+                    @if(isset($t_edit)) 
+                    <form action="{{ route('admin.update') }}" method="POST">
+                        {{ csrf_field() }}
+                        <input type="text" class="form-control" placeholder="NIP" name="nip" required="" @if(isset($t_edit)) value="{{ $t_edit->nip }}" @endif><br>
+                        <input type="text" class="form-control" placeholder="Nama" name="nama" required="" @if(isset($t_edit)) value="{{ $t_edit->name }}" @endif><br>
+                        <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required="" @if(isset($t_edit)) value="{{ $t_edit->jabatan }}" @endif><br>
+                        <button class="btn btn-bg btn-success" onclick="input()" type="submit">SAVE</button>
+                    </form>
+                    @endif
                 </div>
             </div>
             <div class="col-md-2"></div>
@@ -55,7 +67,7 @@
     <script>
         function input()
         {
-            alert("Berhasil menambahkan pegawai.")
+            alert("Berhasil update pegawai.")
         }
     </script>
 </body>
