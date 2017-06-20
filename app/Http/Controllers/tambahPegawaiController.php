@@ -17,16 +17,18 @@ class tambahPegawaiController extends Controller
       $nip = $request->input('nip');
       $nama = $request->input('nama');
       $jabat = $request->input('jabat');
-
+      
       if(tambahPegawai::find($nip)){
-        return redirect('admin');
+        $berhasil = 0;
+        return redirect('admin_input')->with('admin_input', $berhasil);
       }else{
         $pegawai = new tambahPegawai;
         $pegawai->nip = $nip;
         $pegawai->name = $nama;
         $pegawai->jabatan = $jabat;
         $pegawai->save();
-        return redirect('admin');
+        $berhasil = 1;
+        return redirect('admin_input')->with('admin_input', $berhasil);
       } 
     }
 

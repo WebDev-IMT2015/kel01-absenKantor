@@ -38,7 +38,13 @@
     <script>
         function input()
         {
-            alert("Berhasil menambahkan pegawai.")
+            if(($berhasil)=1){
+                alert("Berhasil menambahkan pegawai.")
+            }
+            else
+            {
+                alert("Gagal menambahkan, NIP sudah terdaftar.")
+            }
         }
     </script>
 </body>
