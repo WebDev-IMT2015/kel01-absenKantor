@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 mid">
-                <h2 id="title">Absensi Kantor Brazzers</h2>
+                <h2 id="title">Absensi Kantor</h2>
                 <div class="row">
                     <div class="links">
                         <a href="{{ url('input') }}">Input</a>

@@ -13,14 +13,14 @@ class CreateAbsenTable extends Migration
      */
     public function up()
     {
-        Schema::create('abens', function (Blueprint $table) {
+        Schema::create('absens', function (Blueprint $table) {
+            $table->increments('id');
             $table->string('nip');
             $table->date('tanggal');
-            $table->time('masuk');
-            $table->time('keluar');
-            $table->time('istirahat_mulai');
-            $table->time('istirahat_selesai');
-            $table->time('toleransi');
+            $table->datetime('masuk')->nullable();
+            $table->datetime('keluar')->nullable();
+            $table->datetime('istirahat_mulai')->nullable();
+            $table->datetime('istirahat_selesai')->nullable();
             $table->timestamps();
         });
     }

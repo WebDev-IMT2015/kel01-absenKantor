@@ -14,12 +14,13 @@
 		<div class="row">
 			<div class="col-md-2"></div>
 			<div class="col-md-8 mid">
-				<h2 id="title" class="raleway">Absensi Istirahat Selesai Kantor Brazzers</h2>
+				<h2 id="title" class="raleway">Absensi Istirahat Selesai Kantor</h2>
 				<div class="row">
 					<div class="col-md-2"></div>
 					<div class="col-md-6">
-						<form method="post" action="Absen">
-							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip"><br>
+						<form method="post" action="absen_selesai">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip"><br><br>
 							<button class="btn btn-info" onclick="berhasil()" type="submit">Absen</button>
 						</form><br>
 							<a href="{{ url('/') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
