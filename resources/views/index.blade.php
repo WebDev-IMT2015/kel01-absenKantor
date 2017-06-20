@@ -17,8 +17,8 @@
 				<h2 id="title" class="raleway">Absensi Kantor Brazzers</h2>
 				<a href="{{ url('absen_masuk') }}"><button class="btn btn-md btn-info">Absen Masuk</button></a>&nbsp
 				<a href="{{ url('absen_keluar') }}"><button class="btn btn-md btn-success">Absen keluar</button></a>&nbsp
-				<a href="{{ url('absen_istirahat_mulai') }}"><button class="btn btn-md btn-info">Absen Istirahat Mulai</button></a>&nbsp
-				<a href="{{ url('absen_istirahat_selesai') }}"><button class="btn btn-md btn-success">Absen Istirahat Selesai</button></a>
+				<a href="{{ url('absen_mulai') }}"><button class="btn btn-md btn-info">Absen Istirahat Mulai</button></a>&nbsp
+				<a href="{{ url('absen_selesai') }}"><button class="btn btn-md btn-success">Absen Istirahat Selesai</button></a>
 			</div>
 			<div class="col-md-2"></div>
 		</div>

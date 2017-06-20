@@ -19,9 +19,10 @@
 					<div class="col-md-2"></div>
 					<div class="col-md-6">
 						<form method="post" action="absen_masuk">
-							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip"><br>
+							<input type="text" class="form-control" placeholder="Masukkan NIP" name="nip"><br><br>
 							<button class="btn btn-info" onclick="berhasil()" type="submit">Absen</button>
-						</form>
+						</form><br>
+							<a href="{{ url('/') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
 					</div>
 					<div class="col-md-2">
 					</div>
