@@ -10,7 +10,8 @@ class setWaktuController extends Controller
 {
     public function index()
    	{
-        return view('admin_set');
+        $t = setWaktu::all();
+        return view('admin_set')->with(compact('t'));
    	}
 
    	public function simpan(Request $request)

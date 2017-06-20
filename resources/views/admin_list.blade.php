@@ -49,6 +49,7 @@
                                 @endforeach
                         @endif                    
                     </table>
+                    <a href="{{ url('admin') }}"><button class="btn btn-bg btn-danger">Back</button><br><br></a>
                     @if(isset($t_edit)) 
                     <form action="{{ route('admin.update') }}" method="POST">
                         {{ csrf_field() }}
@@ -57,6 +58,7 @@
                         <input type="text" class="form-control" placeholder="Jabatan" name="jabat" required="" @if(isset($t_edit)) value="{{ $t_edit->jabatan }}" @endif><br>
                         <button class="btn btn-bg btn-success" onclick="input()" type="submit">SAVE</button>
                     </form>
+
                     @endif
                 </div>
             </div>
