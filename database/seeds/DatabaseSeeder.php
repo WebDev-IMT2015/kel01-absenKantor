@@ -11,14 +11,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // DB::table('set_waktus')->insert(
-        // 		[	
-        // 			'masuk' => '08:00:00'
-        // 			'keluar' => '17:00:00'
-        // 			'istirahat_mulai' => '12:00:00'
-        // 			'istirahat_selesai' => '13:00:00'
-        // 			'toleransi' => '00:15:00'
-        // 		]
-        // 	);
+        DB::table('users')->insert(
+        		[	
+        			'name' => 'admin',
+        			'email' => 'admin@example.com',
+        			'jabatan' => 'admin',
+        			'password' => bcrypt('password')
+        		]
+        	);
     }
 }

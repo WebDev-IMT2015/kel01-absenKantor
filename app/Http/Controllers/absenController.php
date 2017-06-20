@@ -119,5 +119,11 @@ class absenController extends Controller
       // } 
     }
 
+    public function history()
+    {
+      $history=absen::all();
+      return view('admin_history')->with(compact('history'));
+    }
+
 
 }

@@ -21,6 +21,8 @@ Route::get('admin', function () {
     return view('admin');
 });
 
+Route::get('history', 'absenController@history');
+
 Route::get('absen_masuk', 'absenController@indexMasuk');
 Route::post('absen_masuk', 'absenController@absenMasuk');
 
