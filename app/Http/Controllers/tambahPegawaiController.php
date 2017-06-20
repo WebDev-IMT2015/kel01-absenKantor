@@ -12,31 +12,20 @@ class tambahPegawaiController extends Controller
    		return view('admin_input');
    }
 
-   public function indexAdmin()
-   {
-      $var = 0;
-      $berhasil = 0;
-      return view('admin')->with(compact('var'))->with(compact('berhasil'));
-   }
-
    public function simpan(Request $request)
    {
       $nip = $request->input('nip');
       $nama = $request->input('nama');
       $jabat = $request->input('jabat');
-      $var = 1;
-      $berhasil = 0;
       if(tambahPegawai::find($nip)){
-        
-        return redirect('admin')->with(compact('var'))->with(compact('berhasil'));
+        return redirect('admin');
       }else{
         $pegawai = new tambahPegawai;
         $pegawai->nip = $nip;
         $pegawai->name = $nama;
         $pegawai->jabatan = $jabat;
         $pegawai->save();
-        $berhasil = 1;
-        return redirect('admin')->with(compact('var'))->with(compact('berhasil'));
+        return redirect('admin');
       } 
     }
 

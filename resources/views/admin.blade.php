@@ -9,19 +9,6 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/admin.css') }}">
     <title>Admin</title>
 </head>
-@if($var==1)
-@if($berhasil==1)
-<script type="text/javascript">
-     alert("TES");
-   
-</script>
- @elseif($berhasil==0)
- <script type="text/javascript">
-     alert("XXX");
-   
-</script>
-    @endif
-@endif
 
 <body class="full-height flex-center position-ref">
     <div class="container raleway">
